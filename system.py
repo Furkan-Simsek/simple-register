@@ -6,31 +6,31 @@ i=0
 
 
 while i==0:
-    print("-----------------Kayıt Sistemi-----------------")
-    soru = input("1) Yeni öğrenci kaydı \n2) Yeni öğretmen kaydı \n3) Tüm öğrencileri Gösterir\n4) Tüm öğretmenleri gösterir\n5) Sistemi kapat: ")
-    if soru == "1":
-        print("-----------------Öğrenci Kayıt-----------------")
+    print("-----------------Register System-----------------")
+    question = input("1) New student enrollment \ n2) New teacher enrollment \ n3) Displays all students \ n4) Displays all teachers \ n5) Turn off the system:")
+    if question == "1":
+        print("-----------------Student Registration-----------------")
         students = open("students.txt", "a")
-        name = input("Öğrenci Adı: ")
-        lastname = input("Öğrenci Soyadı: ")
-        schoolNumber = input("Öğrencinin okul numarası: ")
-        students.write("Ad: " + name + " - Soyadı: " + lastname + " - Okul numarası: " + schoolNumber + "\n")
+        name = input("Student Name:")
+        lastname = input("Student Surname: ")
+        schoolNumber = input("School number of the student: ")
+        students.write("Name: " + name + " - Lastname: " + lastname + " - School Number: " + schoolNumber )
         students.close()
         os.system('cls' if os.name=='nt' else 'clear')
-    if soru == "2":
-        print("-----------------Öğretmen Kayıt-----------------")
+    if question == "2":
+        print("-----------------Teacher Registration-----------------")
         teachers = open("teachers.txt", "a")
-        name = input("Öğretmen Adı: ")
-        lastname = input("Öğretmen Soyadı: ")
-        branch = input("Öğretmenin Branşı: ")
-        teachers.write("Ad: " + name + " - Soyadı: " + lastname + " - Branşı: " + branch + "\n")
+        name = input("Teacher name: ")
+        lastname = input("Teacher surname:")
+        branch = input("Teacher Branch:")
+        teachers.write("Name: " + name + " - Lastname: " + lastname + " - Branch: " + branch + "\n")
         os.system('cls' if os.name=='nt' else 'clear')
-    if soru == "3":
-        print("-----------------Tüm Öğrenciler-----------------")
+    if question == "3":
+        print("-----------------All Students-----------------")
         reads = open("students.txt")
         print(reads.read())
-    if soru == "4":
-        print("-----------------Tüm Öğretmenler-----------------")
+    if question == "4":
+        print("-----------------All Teachers-----------------")
         readt = open("teachers.txt")
         print(readt.read())
     if soru == "5":
