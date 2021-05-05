@@ -1,15 +1,18 @@
 import os
 i=0
+a=0
 
 
 
 
-
-while i==0
-print("-----------------Login-----------------")
-username = input("Enter username")
-password = input("Enter password")
-os.system('cls' if os.name=='nt' else 'clear')
+while i==0:
+    while a==0:
+        print("-----------------Login-----------------")
+        username = input("Enter username")
+        password = input("Enter password")
+        os.system('cls' if os.name=='nt' else 'clear')
+        if password == "Your Password enter" and username == "Admin":
+            a=a+1
     if password == "Your Password enter" and username == "Admin":
         print("-----------------Register System-----------------")
         question = input("1) New student enrollment \ n2) New teacher enrollment \ n3) Displays all students \ n4) Displays all teachers \ n5) Turn off the system:")
